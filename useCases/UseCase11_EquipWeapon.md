@@ -1,8 +1,8 @@
-#Use case 11 - Equip Weapon
-
-
-**Description:** If the Player does not have a weapon equipped the player can view the weapons that they own and are able to equip. The player will then have the the option to equip a weapon of there choice that is present in there inventory.
-
-**Alternate Route:** If the player gains/buys a new weapon they have the choice to equip the weapon straight away.
-
-**Author: Daryn Loughlin**
+ #Use Case 13 - Un-Equip Weapon
+ -**Description:** The player will be able to un-equip the weapon that they currently have equipped, allowing them to equip a different weapon
+ +
+ +**Description:** The player will be able to view the weapon that they currently have equipped.the player will then have the option to un-equip the weapon to allow for the player to equip a different weapon.
+ +
+ +**Alternate-route** the player buys or gains a weapon and they choose to equip it straight away. if the players weapon breaks it is unequipped
+  
+  **Author: Daryn Loughlin**
