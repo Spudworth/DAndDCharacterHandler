@@ -1,19 +1,27 @@
  #Use Case 11 - Equip Weapon
  
  **Actor:** Player.
+ 
+ **Level:** User goal.
+ 
+ **Goal:** To equip a weapon that the player has in there inventory.
 
  **Description:** The player will be able to view the weapon that they currently have own and have in there inventory.the player will then have the option to equip the weapon if they do not have a weapon equiped.
  
  **Pre-Conditions:** The player must not have any weapon equipped already and the player must own the weapon that they are attempting to equip.
  
- **Main-Scenario** 1.The player prompts the systemto equip a weapon
-                   2.The system displays the weapon inventory
+ **Trigger:** The player prompts the system to change their weapon.
+ 
+ **Main-Scenario:** 1.The player prompts the system to equip a weapon.
+                   2.The system displays the weapon inventory.
                    3.The player chooses a weapon from the inventory to equip.
-                   4.The weapon is equiped and the menu disappears allowing the game to continue.
+                   4.The weapon is equiped .
+                   5.The previous weapon is stored in the inventory.
+                   6.The menu disappears allowing the game to continue.
  
- **Alternate-route** The player buys or gains a weapon and they choose to equip it straight away
+ **Alternate-route** The player buys or gains a weapon and they choose to equip it straight away.
  
- **Alternate-route scenario:** 1.The player buys/earns a weapon.
+ **Alternate scenario:** 1.The player buys/earns a weapon.
                                2.The system prompts the user to equip the new weapon.
                                3.The user chooses to equip the weapon.
                                4.The system un-equips the previous weapon and equips the new weapon.
@@ -22,4 +30,4 @@
                                
  **Post-Conditions:** The player now has the new weapon equipped.
   
-  **Author: Daryn Loughlin**
+ **Author: Daryn Loughlin**
