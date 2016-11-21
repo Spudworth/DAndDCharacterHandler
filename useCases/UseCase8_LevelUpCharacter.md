@@ -19,6 +19,10 @@ They may acquire new spells based on the character class,
 
 They may acquire new abilities based on the character class,
 
+**Trigger** Acquiring 100 experience points on a character.
+
+**Frequency of use** Often
+
 
 
 **Author: Andrew landy**
