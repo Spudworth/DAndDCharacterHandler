@@ -29,7 +29,12 @@ Sleight of Hand,
 Stealth,
 Healing.
 
-**Primery Actor** Player
+A character begins with basic equipment and starting spells and abilities
+ based on there character class and race.
+
+There health is determined based on there level and ability scores.
+
+**Primary Actor** Player
 
 **Level** User Goal
 
@@ -41,29 +46,29 @@ Healing.
 
 **Main Success Scenario**
 
-7.1 - System prompts player to select a class.
+7.1 - System prompts player to select a character class.
 
-7.2 - player selects a class from a given list.
+7.2 - player selects a character class from a given list.
 
-7.3 - System prompts player to select a race.
+7.3 - System prompts player to select a character race.
 
-7.4 - Player selects a race from the given list.
+7.4 - Player selects a character race from the given list.
 
 7.5 - System prompts user to enter there Ability Scores.
 
-7.6A - Player inputs there desired scores.
+7.6 - Player inputs there desired scores.
 
 7.7 - System adds pre-determined bonus to Ability Scores based on race.
 
 7.8 - Systems prompts player to enter skills to be trained in.
 
-7.9 - Player chooses 3 skills to be trained in based on class.
+7.9 - Player chooses 3 skills to be trained in based on character class.
 
 7.10 - System calculates skill level based on ability scores.
 
 7.11 - System adds training bonuses to skills based on player choice.
 
-7.12 - System prompts player to chose there starting equipment based on there class.
+7.12 - System prompts player to chose there starting equipment based on there character class.
 
 7.13 - Player chooses starting equipment.
 
@@ -75,17 +80,17 @@ Healing.
 
 7.18 - System determines characters Armor based on equipment and Ability Scores.
 
-7.19 - Charcter Creation is finalised and saved.
+7.19 - Character Creation is finalised and saved.
 
 **Extensions**
 
-7.6B -  Player enters invalid Ability Scores
+7.6A -  Player enters invalid Ability Scores
 
-7.6B1 - System prompts to inform.
+7.6A1 - System prompts to inform.
 
-7.6B2 - System asks for new Ability Scores
+7.6A2 - System asks for new Ability Scores
 
-7.6B3 - Player enters new Ability Scores
+7.6A3 - Player enters new Ability Scores
 
 _
 
