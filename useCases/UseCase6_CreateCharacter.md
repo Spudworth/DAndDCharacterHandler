@@ -1,4 +1,11 @@
 #Use Case 6 - Create Character
+
+**Primary Actor** Player
+
+**Pre-Condition** Player must own an account.
+
+**Level** User Goal
+
 **Description:** The Player will create a new character. This character will be added to a list of characters owned by the Player.
 The Player can have a maximum of 5 Characters.
 
@@ -33,12 +40,6 @@ A character begins with basic equipment and starting spells and abilities
  based on there character class and race.
 
 There health is determined based on there level and ability scores.
-
-**Primary Actor** Player
-
-**Level** User Goal
-
-**Precondition** Player must own an account.
 
 **Success** The player has a new character to play as in the game.
 
@@ -93,8 +94,6 @@ There health is determined based on there level and ability scores.
 7.6A3 - Player enters new Ability Scores
 
 _
-
-
 
 **Frequency of Use** Often
  
