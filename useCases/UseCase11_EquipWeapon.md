@@ -6,7 +6,7 @@
  
  **Goal:** To equip a weapon that the player has in there inventory.
 
- **Description:** The player will be able to view the weapon that they currently have own and have in there inventory.the player will then have the option to equip the weapon if they do not have a weapon equiped.
+ **Description:** The player will be able to equip a weapon that they currently own and have in there inventory.
  
  **Pre-Conditions:** The player must not have any weapon equipped already and the player must own the weapon that they are attempting to equip.
  
