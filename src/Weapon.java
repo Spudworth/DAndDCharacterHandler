@@ -1,6 +1,6 @@
 
 
-public abstract class Weapon{
+public class Weapon{
 
     double damage;
     boolean isSharp,isHeavy,isEnchanted;
