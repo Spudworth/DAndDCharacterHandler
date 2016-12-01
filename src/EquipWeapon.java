@@ -2,7 +2,10 @@
 
 // My class for the equip weapon fully dressed use case.
 
-public class EquipWeapon extends Weapon{
+public class EquipWeapon{
+
+
+
 
 
 

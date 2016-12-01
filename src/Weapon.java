@@ -2,6 +2,7 @@
 
 public class Weapon{
 
+    String type;
     double damage;
     boolean isSharp,isHeavy,isEnchanted;
 
