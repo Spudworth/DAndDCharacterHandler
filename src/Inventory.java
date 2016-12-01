@@ -7,18 +7,19 @@ public class Inventory {
 
     //Map<Weapon, String> weaponsEquippedMap;
     List<Weapon> weaponsEquipped;
-    Map<Weapon, String> weaponsOwnedMap ;
+    List<Weapon> weaponsOwned;
+   // Map<Weapon, String> weaponsOwnedMap ;
 
     Inventory()
     {
         //weaponsEquippedMap = new HashMap<Weapon, String>();
-        weaponsOwnedMap = new HashMap<Weapon, String>();
+        weaponsOwned = new ArrayList<Weapon>();
         weaponsEquipped  = new ArrayList<Weapon>();
     }
     public void addWeapon(String weaponName,boolean isSharp, boolean isHeavy, boolean isEnchanted, double damage)
     {
-        Weapon weapon = new Weapon( isSharp,  isHeavy,  isEnchanted, damage);
-        weaponsOwnedMap.put(weapon,weaponName);
+        Weapon weapon = new Weapon(weaponName, isSharp,  isHeavy,  isEnchanted, damage);
+        weaponsOwned.add(weapon);
     }
     public void viewWeaponsEquipped()
     {
@@ -29,12 +30,16 @@ public class Inventory {
     }
     public void viewAllWeapons()
     {
-        System.out.print(weaponsOwnedMap.values() +" , "+ weaponsOwnedMap.keySet() );
+        for(Weapon e: weaponsOwned)
+        {
+            System.out.println(e);
+        }
     }
     public void equipWeapon(Weapon weapon)
     {
         if(weaponsEquipped.isEmpty())
         {
+            if(weaponsOwned.contains(weapon))
             weaponsEquipped.add(weapon);
 
         }

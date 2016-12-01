@@ -2,6 +2,7 @@
 
 public class Weapon{
 
+    String name;
     String type;
     double damage;
     boolean isSharp,isHeavy,isEnchanted;
@@ -10,8 +11,9 @@ public class Weapon{
     {
 
     }
-    public Weapon(boolean isSharp, boolean isHeavy, boolean isEnchanted, double damage)
+    public Weapon(String name, boolean isSharp, boolean isHeavy, boolean isEnchanted, double damage)
     {
+        setName(name);
         setSharp(isSharp);
         setHeavy(isHeavy);
         setEnchanted(isEnchanted);
@@ -51,4 +53,11 @@ public class Weapon{
     }
 
 
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName()
+    {
+        return name;
+    }
 }
