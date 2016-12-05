@@ -2,7 +2,7 @@ public class createCharacter {
 
     // Basic info
     private String name;
-    private String classType;
+    private CharacterClass classType;
     private Race raceType;
     private int level;
 
@@ -41,11 +41,11 @@ public class createCharacter {
         this.name = name;
     }
 
-    public String getClassType() {
+    public CharacterClass getClassType() {
         return classType;
     }
 
-    public void setClassType(String classType) {
+    public void setClassType(CharacterClass classType) {
         this.classType = classType;
     }
 
@@ -202,7 +202,7 @@ public class createCharacter {
     }
 
 
-    public void createCharacter(String classType, Race raceType, int str, int dex, int con, int intel, int wis, int cha)
+    public void createCharacter(CharacterClass classType, Race raceType, int str, int dex, int con, int intel, int wis, int cha)
     {
         setClassType(classType);
         setRaceType(raceType);

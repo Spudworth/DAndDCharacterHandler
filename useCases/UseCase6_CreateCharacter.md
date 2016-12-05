@@ -12,8 +12,8 @@ The Player can have a maximum of 5 Characters.
 A character will be on of the following classes:
 Cleric,
 Fighter,
-Wizerd,
-Rougue.
+Wizard,
+Rogue.
 
 A Charcter will be on of the following races:
 Human, Dwarf, Elf, Halfling. 
