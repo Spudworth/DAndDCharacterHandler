@@ -14,6 +14,12 @@ public class MenuInterface extends JFrame implements ActionListener {
     Inventory inventory = new Inventory();
     ArrayList<Weapon> weaponsOwned = new ArrayList<Weapon>();
 
+    public static void main(String args[])
+    {
+        MenuInterface frame = new MenuInterface();
+        frame.setVisible(true);
+
+    }
 
     public MenuInterface()
     {
