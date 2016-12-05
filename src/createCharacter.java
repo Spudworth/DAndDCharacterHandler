@@ -23,16 +23,17 @@ public class createCharacter {
     final private int  chaMod = (int)(getCharisma() -10)/2;
 
     //skills
-    private int acrobatics;
-    private int athletics;
-    private int history;
-    private int nature;
-    private int religion;
-    private int sleightOfHand;
-    private int stealth;
-    private int healing;
+    private Skills acrobatics = new Skills();
+    private Skills athletics = new Skills();
+    private Skills history = new Skills();
+    private Skills nature = new Skills();
+    private Skills religion = new Skills();
+    private Skills sleightOfHand = new Skills();
+    private Skills stealth = new Skills();
+    private Skills healing = new Skills();
 
 
+    // GENERAL INFORMATION
     public String getName() {
         return name;
     }
@@ -64,6 +65,8 @@ public class createCharacter {
     public void setLevel(int level) {
         this.level = level;
     }
+
+    //ABILITY SCORES
 
     public int getStrength() {
         return strength;
@@ -113,6 +116,8 @@ public class createCharacter {
         this.charisma = charisma;
     }
 
+    // MODIFIERS
+
     public int getStrMod() {
         return strMod;
     }
@@ -137,8 +142,10 @@ public class createCharacter {
         return chaMod;
     }
 
+    //SKILLS
+
     public int getAcrobatics() {
-        return acrobatics;
+        return acrobatics.getSkillValue();
     }
 
     public void setAcrobatics(int acrobatics) {
@@ -146,7 +153,7 @@ public class createCharacter {
     }
 
     public int getAthletics() {
-        return athletics;
+        return athletics.getSkillValue();
     }
 
     public void setAthletics(int athletics) {
@@ -154,7 +161,7 @@ public class createCharacter {
     }
 
     public int getHistory() {
-        return history;
+        return history.getSkillValue();
     }
 
     public void setHistory(int history) {
@@ -162,7 +169,7 @@ public class createCharacter {
     }
 
     public int getNature() {
-        return nature;
+        return nature.getSkillValue();
     }
 
     public void setNature(int nature) {
@@ -170,7 +177,7 @@ public class createCharacter {
     }
 
     public int getReligion() {
-        return religion;
+        return religion.getSkillValue();
     }
 
     public void setReligion(int religion) {
@@ -178,7 +185,7 @@ public class createCharacter {
     }
 
     public int getSleightOfHand() {
-        return sleightOfHand;
+        return sleightOfHand.getSkillValue();
     }
 
     public void setSleightOfHand(int sleightOfHand) {
@@ -186,7 +193,7 @@ public class createCharacter {
     }
 
     public int getStealth() {
-        return stealth;
+        return stealth.getSkillValue();
     }
 
     public void setStealth(int stealth) {
@@ -194,7 +201,7 @@ public class createCharacter {
     }
 
     public int getHealing() {
-        return healing;
+        return healing.getSkillValue();
     }
 
     public void setHealing(int healing) {
