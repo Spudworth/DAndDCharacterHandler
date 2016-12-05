@@ -3,7 +3,7 @@ public class createCharacter {
     // Basic info
     private String name;
     private String classType;
-    private String raceType;
+    private Race raceType;
     private int level;
 
     // Ability Scores
@@ -49,11 +49,11 @@ public class createCharacter {
         this.classType = classType;
     }
 
-    public String getRaceType() {
+    public Race getRaceType() {
         return raceType;
     }
 
-    public void setRaceType(String raceType) {
+    public void setRaceType(Race raceType) {
         this.raceType = raceType;
     }
 
@@ -202,7 +202,7 @@ public class createCharacter {
     }
 
 
-    public void createCharacter(String classType, String raceType, int str, int dex, int con, int intel, int wis, int cha)
+    public void createCharacter(String classType, Race raceType, int str, int dex, int con, int intel, int wis, int cha)
     {
         setClassType(classType);
         setRaceType(raceType);
@@ -216,29 +216,29 @@ public class createCharacter {
     private void setAbilityScores(int str, int dex, int con, int intel, int wis, int cha) {
 
         // STRENGTH
-        if(getRaceType() == "dwarf")
+        if(getRaceType() == Race.DWARF)
             setStrength(str+2);
-        else if(getRaceType() == "human")
+        else if(getRaceType() == Race.HUMAN)
             setStrength(str+1);
         else
             setStrength(str);
 
         //DEXTERITY
-        if(getRaceType() == "elf")
+        if(getRaceType() == Race.ELF)
             setDexterity(dex+2);
-        else if (getRaceType() == "human" || getRaceType() == "halfling")
+        else if (getRaceType() == Race.HUMAN || getRaceType() == Race.HALFLING)
             setDexterity(dex+1);
         else
             setDexterity(dex);
 
         //CONSTITUTION
-        if(getRaceType() == "dwarf" || getRaceType() == "human")
+        if(getRaceType() == Race.DWARF || getRaceType() == Race.HUMAN)
             setConstitution(con+1);
         else
             setConstitution(con);
 
         //INTELLIGENCE
-        if(getRaceType() == "elf" || getRaceType() == "human")
+        if(getRaceType() == Race.ELF || getRaceType() == Race.HUMAN)
             setIntelligence(intel+1);
         else
             setIntelligence(intel);
@@ -247,9 +247,9 @@ public class createCharacter {
         setWisdom(wis);
 
         //CHARISMA
-        if(getRaceType() == "halfling")
+        if(getRaceType() == Race.HALFLING)
             setCharisma(cha+2);
-        else if (getRaceType()== "human")
+        else if (getRaceType()== Race.HUMAN)
             setCharisma(cha+1);
         else
             setCharisma(cha);
