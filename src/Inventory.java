@@ -7,7 +7,7 @@ public class Inventory {
 
     //Map<Weapon, String> weaponsEquippedMap;
     List<Weapon> weaponsEquipped;
-    List<Weapon> weaponsOwned;
+    public ArrayList<Weapon> weaponsOwned;
    // Map<Weapon, String> weaponsOwnedMap ;
 
     Inventory()
@@ -15,6 +15,8 @@ public class Inventory {
         //weaponsEquippedMap = new HashMap<Weapon, String>();
         weaponsOwned = new ArrayList<Weapon>();
         weaponsEquipped  = new ArrayList<Weapon>();
+        Weapon axe = new Weapon("Axe",true,true,false,40);
+        weaponsOwned.add(axe);
     }
     public void addWeapon(String weaponName,boolean isSharp, boolean isHeavy, boolean isEnchanted, double damage)
     {

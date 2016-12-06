@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by t00182938 on 05/12/2016.
@@ -12,12 +12,17 @@ public class MenuInterface extends JFrame implements ActionListener {
 
     JMenu WeaponMenu;
     Inventory inventory = new Inventory();
-    ArrayList<Weapon> weaponsOwned = new ArrayList<Weapon>();
+    ArrayList<Weapon> weaponsOwned;
+
 
     public static void main(String args[])
     {
+        Inventory inventory = new Inventory();
+        ArrayList<Weapon> weaponsOwned;
         MenuInterface frame = new MenuInterface();
         frame.setVisible(true);
+
+        weaponsOwned = inventory.weaponsOwned;
 
     }
 
@@ -71,7 +76,8 @@ public class MenuInterface extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("View Weapons"))
         {
-            inventory.viewAllWeapons();
+           // inventory.viewAllWeapons();
+            showMessage(weaponsOwned.toString());
         }
         else if(e.getActionCommand().equals("Equip Weapon"))
         {
