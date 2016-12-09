@@ -10,7 +10,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void getSpellOrAbilityNamePass() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Stealth","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new Abilities("Stealth","I'm very Sneaky",true);
         String currentName = spellsAndAbilities.getSpellOrAbilityName();
         Assert.assertEquals(currentName,"Stealth");
 
@@ -19,7 +19,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void getSpellOrAbilityNameFail() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Stealth","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new Abilities("Stealth","I'm very Sneaky",true);
         String currentName = spellsAndAbilities.getSpellOrAbilityName();
         Assert.assertNotEquals(currentName,"Night vision");
 
@@ -28,7 +28,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void setSpellOrAbilityNamePass() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Night Vision","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new Abilities("Night Vision","I'm very Sneaky",true);
         spellsAndAbilities.setSpellOrAbilityName("Stealth");
         String currentName = spellsAndAbilities.getSpellOrAbilityName();
         Assert.assertEquals(currentName,"Stealth");
@@ -38,7 +38,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void setSpellOrAbilityNameFail() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Night Vision","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new  Abilities("Night Vision","I'm very Sneaky",true);
         spellsAndAbilities.setSpellOrAbilityName("Stealth");
         String currentName = spellsAndAbilities.getSpellOrAbilityName();
         Assert.assertNotEquals(currentName,"Night Vision");
@@ -48,7 +48,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void getSpellOrAbilityDescriptionPass() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Stealth","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new Abilities("Stealth","I'm very Sneaky",true);
         String currentDescription = spellsAndAbilities.getSpellOrAbilityDescription();
         Assert.assertEquals(currentDescription,"I'm very Sneaky");
 
@@ -57,7 +57,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void getSpellOrAbilityDescriptionFail() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Stealth","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new Abilities("Stealth","I'm very Sneaky",true);
         String currentDescription = spellsAndAbilities.getSpellOrAbilityDescription();
         Assert.assertNotEquals(currentDescription,"I'm not very Sneaky");
 
@@ -66,7 +66,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void setSpellOrAbilityDescriptionPass() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Night Vision","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new  Abilities("Night Vision","I'm very Sneaky",true);
         spellsAndAbilities.setSpellOrAbilityDescription("I can see in the dark");
         String currentDescription = spellsAndAbilities.getSpellOrAbilityDescription();
         Assert.assertEquals(currentDescription,"I can see in the dark");
@@ -76,7 +76,7 @@ public class SpellsAndAbilitiesTest {
     @Test
     public void setSpellOrAbilityDescriptionFail() throws Exception {
 
-        SpellsAndAbilities spellsAndAbilities = new SpellsAndAbilities("Night Vision","I'm very Sneaky");
+        SpellsAndAbilities spellsAndAbilities = new  Abilities("Night Vision","I'm very Sneaky",true);
         spellsAndAbilities.setSpellOrAbilityDescription("I can see in the dark");
         String currentDescription = spellsAndAbilities.getSpellOrAbilityDescription();
         Assert.assertNotEquals(currentDescription,"I'm very Sneaky");

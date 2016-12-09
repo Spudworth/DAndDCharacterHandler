@@ -1,5 +1,5 @@
 
-public class SpellsAndAbilities {
+public abstract class SpellsAndAbilities {
     private String spellOrAbilityName;
     private String spellOrAbilityDescription;
 
