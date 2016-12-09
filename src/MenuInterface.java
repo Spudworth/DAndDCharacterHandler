@@ -76,8 +76,7 @@ public class MenuInterface extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("View Weapons"))
         {
-           // inventory.viewAllWeapons();
-            showMessage(weaponsOwned.toString());
+           showMessage("" + weaponsOwned);
         }
         else if(e.getActionCommand().equals("Equip Weapon"))
         {
