@@ -1,11 +1,11 @@
 public class Payment {
 
 
-        String surName;
-        String foreName;
-        int cardNumber;
-        int expiryDate;
-        int securityCode;
+       private String surName;
+       private String foreName;
+       private int cardNumber;
+       private int expiryDate;
+       private int securityCode;
 
 
 

@@ -8,6 +8,12 @@ import javax.swing.*;
 
         JMenu PaymentMenu;
         JMenu LoginMenu;
+        boolean isPremium = false;
+        String surname;
+        String foreName;
+        int cardNumber;
+        int expiryDate;
+        int securityCode;
        // JFrame loginMenu = loginMenu();
 
         public static void main(String[] args) {
@@ -32,7 +38,7 @@ import javax.swing.*;
 
         private void createPaymentMenu() {
             this.PaymentMenu = new JMenu("Account");
-            JMenuItem item = new JMenuItem("View Account Details");
+            JMenuItem item = new JMenuItem("Go premium");
             item.addActionListener(this);
             this.PaymentMenu.add(item);
             item = new JMenuItem("Quit");
@@ -51,15 +57,33 @@ import javax.swing.*;
         }
 
         public void actionPerformed(ActionEvent e) {
-            if(e.getActionCommand().equals("View Account Details"))
+            if(e.getActionCommand().equals("Go premium"))
             {
-                display();
+                surname = JOptionPane.showInputDialog("Enter your surname: ");
+                foreName = JOptionPane.showInputDialog("Enter your forename: ");
+                cardNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter your card number: "));
+                expiryDate = Integer.parseInt(JOptionPane.showInputDialog("Enter your cards expiry date: "));
+                securityCode = Integer.parseInt(JOptionPane.showInputDialog("Enter your card's security number: "));
+
+
+                GoPremium(surname, foreName, cardNumber,  expiryDate, securityCode);
+                if(isPremium)
+                {
+                    this.showMessage("Your account has now been upgraded to premium");
+
+                }
             }
             else
             {
                 this.showMessage("Not implemented yet");
             }
 
+        }
+
+        private boolean GoPremium(String surname, String foreName, int cardNumber, int expiryDate, int securityCode)
+        {
+            Payment payment = new Payment(surname, foreName, cardNumber,  expiryDate, securityCode);
+            return isPremium = true;
         }
 
         private void showMessage(String s) {
