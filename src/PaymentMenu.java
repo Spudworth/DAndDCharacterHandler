@@ -66,7 +66,26 @@ import javax.swing.*;
         private void showMessage(JTextArea area) {
         }
 
-
+        public static boolean isValid(String cardNumber)
+        {
+            int sum = 0;
+            boolean alternate = false;
+            for (int i = cardNumber.length() - 1; i >= 0; i--)
+            {
+                int n = Integer.parseInt(cardNumber.substring(i, i + 1));
+                if (alternate)
+                {
+                    n *= 2;
+                    if (n > 9)
+                    {
+                        n = (n % 10) + 1;
+                    }
+                }
+                sum += n;
+                alternate = !alternate;
+            }
+            return (sum % 10 == 0);
+        }
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equals("Go premium"))
             {
@@ -74,12 +93,12 @@ import javax.swing.*;
 
                 surname = JOptionPane.showInputDialog("Enter your surname: ");
                 foreName = JOptionPane.showInputDialog("Enter your forename: ");
-                cardNumber =  double.parseDouble(JOptionPane.showInputDialog(CardType.detect("Enter your card number: ")));
+                cardNumber =  Double.parseDouble(JOptionPane.showInputDialog(CardType.detect("Enter your card number: ")));
                 expiryDate = Integer.parseInt(JOptionPane.showInputDialog("Enter your cards expiry date: "));
                 securityCode = Integer.parseInt(JOptionPane.showInputDialog("Enter your card's security number: "));
 
                 GoPremium(surname, foreName, cardNumber,  expiryDate, securityCode);
-                if( isPremium)
+                if(isValid())
                 {
                     this.showMessage("Your account has now been upgraded to premium");
 
