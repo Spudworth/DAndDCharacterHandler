@@ -17,12 +17,12 @@ public class createCharacter {
     private int charisma;
 
     //ability modifiers
-    final private int  strMod = (int)(getStrength() -10)/2;
-    final private int  dexMod = (int)(getDexterity() -10)/2;
-    final private int  conMod = (int)(getConstitution() -10)/2;
-    final private int  intMod = (int)(getIntelligence() -10)/2;
-    final private int  wisMod = (int)(getWisdom() -10)/2;
-    final private int  chaMod = (int)(getCharisma() -10)/2;
+    private int  strMod = (int)(getStrength() -10)/2;
+    private int  dexMod = (int)(getDexterity() -10)/2;
+    private int  conMod = (int)(getConstitution() -10)/2;
+    private int  intMod = (int)(getIntelligence() -10)/2;
+    private int  wisMod = (int)(getWisdom() -10)/2;
+    private int  chaMod = (int)(getCharisma() -10)/2;
 
     //skills
     private Skills acrobatics = new Skills();
@@ -144,6 +144,30 @@ public class createCharacter {
         return chaMod;
     }
 
+    public void setStrMod(int strMod) {
+        this.strMod = strMod;
+    }
+
+    public void setDexMod(int dexMod) {
+        this.dexMod = dexMod;
+    }
+
+    public void setConMod(int conMod) {
+        this.conMod = conMod;
+    }
+
+    public void setIntMod(int intMod) {
+        this.intMod = intMod;
+    }
+
+    public void setWisMod(int wisMod) {
+        this.wisMod = wisMod;
+    }
+
+    public void setChaMod(int chaMod) {
+        this.chaMod = chaMod;
+    }
+
     //SKILLS
 
     public int getAcrobatics() {
@@ -220,7 +244,11 @@ public class createCharacter {
 
     }
 
-    private void setAbilityScores(int str, int dex, int con, int intel, int wis, int cha) {
+    public void createCharacter(){
+
+    }
+
+    public void setAbilityScores(int str, int dex, int con, int intel, int wis, int cha) {
 
         // STRENGTH
         if(getRaceType() == Race.DWARF)
@@ -282,6 +310,7 @@ public class createCharacter {
         setSleightOfHand(getDexMod());
         setStealth(getDexMod());
     }
+
 
 
 }

@@ -13,8 +13,17 @@ public class CharacterCreation {
     private JComboBox cboClass;
     private JComboBox cboRace;
     private JButton btnSubmit;
+    private JPanel pnlGeneral;
 
-    private createCharacter newCharacter;
+    private createCharacter newCharacter = new createCharacter();
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("CharacterCreation");
+        frame.setContentPane(new CharacterCreation().pnlGeneral);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 
     public CharacterCreation() {
         btnSubmit.addActionListener(new ActionListener() {
@@ -24,12 +33,19 @@ public class CharacterCreation {
 
                 if(e.getSource() == btnSubmit) {
 
-
                     newCharacter.setName(txtName.getText());
 
                     setRace();
 
                     setClass();
+
+                    AbilityScores characterAbilities = new AbilityScores(newCharacter);
+
+
+                    getPanel().setVisible(false);
+
+
+
 
                 }
             }
@@ -60,5 +76,10 @@ public class CharacterCreation {
         });
 
 
+    }
+
+    public JPanel getPanel()
+    {
+        return pnlGeneral;
     }
 }
