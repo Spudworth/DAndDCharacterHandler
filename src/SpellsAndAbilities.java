@@ -1,62 +1,27 @@
 
-
 public class SpellsAndAbilities {
+    private String spellOrAbilityName;
+    private String spellOrAbilityDescription;
 
+    public SpellsAndAbilities(String spellOrAbilitiesName, String spellOrAbilitiesDescription) {
 
-    private String spellName;
-    private String spellDescription;
-    private String damageType;
-    private int damage;
-
-    private String abilityName;
-    private String abilityDescription;
-
-    public String getSpellName() {
-        return spellName;
+        setSpellOrAbilityName(spellOrAbilitiesName);
+        setSpellOrAbilityDescription(spellOrAbilitiesDescription);
     }
 
-    public void setSpellName(String spellName) {
-        this.spellName = spellName;
+    public String getSpellOrAbilityName() {
+        return spellOrAbilityName;
     }
 
-    public String getSpellDescription() {
-        return spellDescription;
+    public void setSpellOrAbilityName(String spellOrAbilityName) {
+        this.spellOrAbilityName = spellOrAbilityName;
     }
 
-    public void setSpellDescription(String spellDescription) {
-        this.spellDescription = spellDescription;
+    public String getSpellOrAbilityDescription() {
+        return spellOrAbilityDescription;
     }
 
-    public String getDamageType() {
-        return damageType;
+    public void setSpellOrAbilityDescription(String spellOrAbilitiesDescription) {
+        this.spellOrAbilityDescription = spellOrAbilityDescription;
     }
-
-    public void setDamageType(String damageType) {
-        this.damageType = damageType;
-    }
-
-    public int getDamage() {
-        return damage;
-    }
-
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    public String getAbilityName() {
-        return abilityName;
-    }
-
-    public void setAbilityName(String abilityName) {
-        this.abilityName = abilityName;
-    }
-
-    public String getAbilityDescription() {
-        return abilityDescription;
-    }
-
-    public void setAbilityDescription(String abilityDescription) {
-        this.abilityDescription = abilityDescription;
-    }
-
 }
