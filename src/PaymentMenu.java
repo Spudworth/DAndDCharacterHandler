@@ -41,9 +41,13 @@ import javax.swing.*;
             JMenuItem item = new JMenuItem("Go premium");
             item.addActionListener(this);
             this.PaymentMenu.add(item);
+            item = new JMenuItem("View Account");
+            item.addActionListener(this);
+            this.PaymentMenu.add(item);
             item = new JMenuItem("Quit");
             item.addActionListener(this);
             this.PaymentMenu.add(item);
+
         }
 
         public void display() {
@@ -72,6 +76,10 @@ import javax.swing.*;
                     this.showMessage("Your account has now been upgraded to premium");
 
                 }
+            }
+            else if(e.getActionCommand().equals("View Account"))
+            {
+
             }
             else
             {
