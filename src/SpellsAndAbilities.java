@@ -21,7 +21,7 @@ public class SpellsAndAbilities {
         return spellOrAbilityDescription;
     }
 
-    public void setSpellOrAbilityDescription(String spellOrAbilitiesDescription) {
+    public void setSpellOrAbilityDescription(String spellOrAbilityDescription) {
         this.spellOrAbilityDescription = spellOrAbilityDescription;
     }
 }
