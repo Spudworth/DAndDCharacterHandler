@@ -3,13 +3,13 @@ public class Payment {
 
        private String surName;
        private String foreName;
-       private int cardNumber;
+       private double cardNumber;
        private int expiryDate;
        private int securityCode;
 
 
 
-        public Payment(String surname, String foreName, int cardNumber, int expiryDate, int securityCode)
+        public Payment(String surname, String foreName,  double cardNumber, int expiryDate, int securityCode)
         {
             setSurName(surname);
             setForeName(foreName);
@@ -34,11 +34,11 @@ public class Payment {
             this.foreName = foreName;
         }
 
-        public int getCardNumber() {
+        public  double getCardNumber() {
             return cardNumber;
         }
 
-        public void setCardNumber(int cardNumber) {
+        public void setCardNumber( double cardNumber) {
             this.cardNumber = cardNumber;
         }
 

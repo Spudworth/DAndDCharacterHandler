@@ -2,21 +2,27 @@ import java.awt.Component;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.*;
 
     public class PaymentMenu extends JFrame implements ActionListener {
+
 
         JMenu PaymentMenu;
         JMenu LoginMenu;
         boolean isPremium = false;
         String surname;
         String foreName;
-        int cardNumber;
+        double cardNumber;
         int expiryDate;
         int securityCode;
        // JFrame loginMenu = loginMenu();
 
+        Account account = new Account(false, "Jolene");
+
         public static void main(String[] args) {
+
+
 
             PaymentMenu frame = new PaymentMenu();
 
@@ -60,35 +66,43 @@ import javax.swing.*;
         private void showMessage(JTextArea area) {
         }
 
+
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equals("Go premium"))
             {
+
+
                 surname = JOptionPane.showInputDialog("Enter your surname: ");
                 foreName = JOptionPane.showInputDialog("Enter your forename: ");
-                cardNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter your card number: "));
+                cardNumber =  double.parseDouble(JOptionPane.showInputDialog(CardType.detect("Enter your card number: ")));
                 expiryDate = Integer.parseInt(JOptionPane.showInputDialog("Enter your cards expiry date: "));
                 securityCode = Integer.parseInt(JOptionPane.showInputDialog("Enter your card's security number: "));
 
-
                 GoPremium(surname, foreName, cardNumber,  expiryDate, securityCode);
-                if(isPremium)
+                if( isPremium)
                 {
                     this.showMessage("Your account has now been upgraded to premium");
 
                 }
+                else
+                    this.showMessage("Card number goes against card regulations. Invalid card number.");
             }
             else if(e.getActionCommand().equals("View Account"))
             {
-
+                    if(account.isPremium())
+                        this.showMessage("The account for "+ account.getUsername() + " is premium");
+                    else
+                        this.showMessage("The account for "+ account.getUsername() + " is not premium");
             }
             else
             {
-                this.showMessage("Not implemented yet");
+                this.showMessage("Goodbye");
+                System.exit(0);
             }
 
         }
 
-        private boolean GoPremium(String surname, String foreName, int cardNumber, int expiryDate, int securityCode)
+        private boolean GoPremium(String surname, String foreName,  double cardNumber, int expiryDate, int securityCode)
         {
             Payment payment = new Payment(surname, foreName, cardNumber,  expiryDate, securityCode);
             return isPremium = true;
