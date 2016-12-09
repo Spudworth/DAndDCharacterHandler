@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class createCharacter {
 
     // Basic info
@@ -149,7 +151,7 @@ public class createCharacter {
     }
 
     public void setAcrobatics(int acrobatics) {
-        this.acrobatics = acrobatics;
+       this.acrobatics.setSkillValues(acrobatics);
     }
 
     public int getAthletics() {
@@ -157,7 +159,7 @@ public class createCharacter {
     }
 
     public void setAthletics(int athletics) {
-        this.athletics = athletics;
+        this.athletics.setSkillValues(athletics);
     }
 
     public int getHistory() {
@@ -165,7 +167,7 @@ public class createCharacter {
     }
 
     public void setHistory(int history) {
-        this.history = history;
+        this.history.setSkillValues(history);
     }
 
     public int getNature() {
@@ -173,7 +175,7 @@ public class createCharacter {
     }
 
     public void setNature(int nature) {
-        this.nature = nature;
+        this.nature.setSkillValues(nature);
     }
 
     public int getReligion() {
@@ -181,7 +183,7 @@ public class createCharacter {
     }
 
     public void setReligion(int religion) {
-        this.religion = religion;
+        this.religion.setSkillValues(religion);
     }
 
     public int getSleightOfHand() {
@@ -189,7 +191,7 @@ public class createCharacter {
     }
 
     public void setSleightOfHand(int sleightOfHand) {
-        this.sleightOfHand = sleightOfHand;
+        this.sleightOfHand.setSkillValues(sleightOfHand);
     }
 
     public int getStealth() {
@@ -197,7 +199,7 @@ public class createCharacter {
     }
 
     public void setStealth(int stealth) {
-        this.stealth = stealth;
+        this.stealth.setSkillValues(stealth);
     }
 
     public int getHealing() {
@@ -205,7 +207,7 @@ public class createCharacter {
     }
 
     public void setHealing(int healing) {
-        this.healing = healing;
+        this.healing.setSkillValues(healing);
     }
 
 
@@ -215,8 +217,6 @@ public class createCharacter {
         setRaceType(raceType);
         setAbilityScores(str, dex, con, intel, wis, cha);
         setSkillValues();
-
-
 
     }
 
@@ -260,6 +260,16 @@ public class createCharacter {
             setCharisma(cha+1);
         else
             setCharisma(cha);
+    }
+
+    public void skillTraining(ArrayList<Skills> trained)
+    {
+        for (Skills s :
+                trained) {
+
+            s.isTrained(true);
+
+        }
     }
 
     private void setSkillValues() {
