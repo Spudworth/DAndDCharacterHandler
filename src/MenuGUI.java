@@ -4,9 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-/**
- * Created by X99-A on 11-Dec-16.
- */
+
 public class MenuGUI extends JFrame implements ActionListener{
 
     JMenu weaponMenu;
@@ -16,7 +14,7 @@ public class MenuGUI extends JFrame implements ActionListener{
     ArrayList<Weapon> weaponsOwned;
 
     public MenuGUI(){
-        setTitle("Weapon Menu");
+        setTitle("Main Menu");
         setSize(500,250);
         setLocation(100,100);
         Container pane = getContentPane();
