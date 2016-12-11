@@ -1,4 +1,6 @@
 
+
+import javax.tools.Tool;
 import java.util.*;
 
 public class Inventory {
@@ -32,33 +34,36 @@ public class Inventory {
         tools.add(tool);
     }
 
+
+
     public void addWeapon(String weaponName,boolean isSharp, boolean isHeavy, boolean isEnchanted, double damage)
     {
         Weapon weapon = new Weapon(weaponName, isSharp,  isHeavy,  isEnchanted, damage);
         weaponsOwned.add(weapon);
     }
 
+
     public void viewSpells(){
 
-            for(Object spell : spells){
+            for(Spells spell : spells){
 
-                System.out.println(spell);
+                System.out.println(spell.toString());
             }
     }
 
     public void viewAbilities(){
 
-        for(Object ability : abilities){
+        for(Abilities ability : abilities){
 
-            System.out.println(ability);
+            System.out.println(ability.toString());
         }
     }
 
     public void viewTools(){
 
-        for(Object tool : tools){
+        for(Tools tool : tools){
 
-            System.out.println(tool);
+            System.out.println(tool.toString());
         }
     }
 
@@ -73,7 +78,7 @@ public class Inventory {
     {
         for(Weapon e: weaponsOwned)
         {
-            System.out.println(e);
+            System.out.println(e.toString());
         }
     }
     public void equipWeapon(Weapon weapon)

@@ -24,4 +24,8 @@ public abstract class SpellsAndAbilities {
     public void setSpellOrAbilityDescription(String spellOrAbilityDescription) {
         this.spellOrAbilityDescription = spellOrAbilityDescription;
     }
+    public String toString(){
+        return "Name:" +getSpellOrAbilityName()+
+                "\nDescription:" +getSpellOrAbilityDescription();
+    }
 }

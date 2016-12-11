@@ -3,14 +3,12 @@
 public class Weapon{
 
     String name;
-    String type;
     double damage;
-    boolean isSharp,isHeavy,isEnchanted;
+    boolean isSharp;
+    boolean isHeavy;
+    boolean isEnchanted;
 
-    public Weapon()
-    {
 
-    }
     public Weapon(String name, boolean isSharp, boolean isHeavy, boolean isEnchanted, double damage)
     {
         setName(name);
@@ -59,5 +57,14 @@ public class Weapon{
     public String getName()
     {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name +
+                "\nisSharp: " + isSharp +
+                "\nIs Heavy? " + isHeavy +
+                "\nIs Enchanted? " + isEnchanted +
+                "\nDamage: " + damage +"\n";
     }
 }

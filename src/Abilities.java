@@ -15,4 +15,9 @@ public class Abilities extends SpellsAndAbilities {
     public void setIsPassive(Boolean passive) {
         isPassive = passive;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "\nIs Passive? " + getIsPassive()+"\n" ;
+    }
 }

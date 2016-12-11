@@ -31,4 +31,9 @@ public class Spells extends SpellsAndAbilities {
     }
 
 
+    @Override
+    public  String toString() {
+        return super.toString()+ "\nDamage Type: " + getDamageType() +
+                "\nDamage: " + getDamage()+"\n";
+    }
 }

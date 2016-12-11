@@ -39,4 +39,10 @@ public class Tools {
     }
 
 
+
+    public String toString() {
+        return "Tool Name: " + getToolName() +
+                "\nTool Description: " + getToolDescription() +
+                "\nTool Weight: " + getToolWeight()+"\n" ;
+    }
 }
